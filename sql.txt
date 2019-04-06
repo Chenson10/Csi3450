@@ -1,0 +1,26 @@
+//this one allows you to search a Director name and will return all movies they have directed. 
+//We would want to replace 'dudeman' with the name of the variable we are searching for
+
+SELECT movie
+FROM Directs
+WHERE peopleID = ANY (SELECT peopleID FROM People WHERE peopleFNAM = 'dudeman');
+
+
+
+//this one selects movies made by a company
+
+select movieName
+from Production
+where companyName = 'awesome inc'
+
+
+
+//selects the companies that worked on a movie
+
+select companyName
+from Production
+Where movieName = 'movie 3'
+
+
+
+//
